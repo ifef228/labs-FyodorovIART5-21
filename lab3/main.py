@@ -1,10 +1,10 @@
 from time import sleep
 
-from lab2.cm_timer import CmTimer1, cm_timer2
-from lab2.field import field
-from lab2.genRandom import gen_random
-from lab2.unique import Unique
-from lab2.decorator import *
+from lab3.cm_timer import CmTimer1, cm_timer2
+from lab3.field import field
+from lab3.genRandom import gen_random
+from lab3.unique import Unique
+from lab3.decorator import *
 
 
 def main():

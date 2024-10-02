@@ -3,7 +3,7 @@ def print_result(func):
         print(func)
         result = func()
         print_decorated(result)
-
+        return result
     return wrapper
 
 
@@ -12,7 +12,7 @@ def print_result_args(func):
         print(func)
         result = func(arg[0])
         print_decorated(result)
-
+        return result
     return wrapper
 
 

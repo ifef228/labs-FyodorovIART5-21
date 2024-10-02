@@ -3,7 +3,7 @@ import random
 
 from cm_timer import CmTimer1
 from field import field
-from lab2.decorator import *
+from lab3.decorator import *
 from unique import Unique
 
 path = "data_light.json"
@@ -19,22 +19,20 @@ def f1(arg):
 
 @print_result_args
 def f2(arg):
-    return filter(lambda value: str(value).startswith("программист"), arg)
+    return list(filter(lambda value: value is not None and str(value).startswith('программист'), arg))
 
 
 @print_result_args
 def f3(arg):
-    return map(lambda value: (str(value) + " с опытом Python"), arg)
+    return list(map(lambda value: (str(value) + " с опытом Python"), arg))
 
 
 @print_result_args
 def f4(arg):
-    return map(lambda value: value[0] + ", зарплата " + str(value[1]),
-               zip(arg, [random.randint(100_000, 200_000) for _ in range(len(arg))]))
+    return list(map(lambda value: value[0] + ", зарплата " + str(value[1]),
+                    zip(arg, [random.randint(100_000, 200_000) for _ in range(len(arg))])))
 
 
 if __name__ == '__main__':
     with CmTimer1():
-        print()
-        print(f1(data))
-        # f4(f3(f2(f1(data))))
+        f4(f3(f2(f1(data))))
