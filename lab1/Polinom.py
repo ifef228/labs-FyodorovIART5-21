@@ -53,7 +53,6 @@ class Polinom:
         else:
             x1 = (-self.b + math.sqrt(d)) / (2 * self.a)
             x2 = (-self.b - math.sqrt(d)) / (2 * self.a)
-
             self.rootsArr = self.processX(x1) + self.processX(x2)
         return self.rootsArr
 

@@ -1,3 +1,6 @@
+from time import sleep
+
+from lab2.cm_timer import CmTimer1, cm_timer2
 from lab2.field import field
 from lab2.genRandom import gen_random
 from lab2.unique import Unique
@@ -43,6 +46,14 @@ def main():
     test_2()
     test_3()
     test_4()
+
+    #6
+    with CmTimer1() as f:
+        sleep(5.5)
+
+    with cm_timer2() as f1:
+        sleep(1.2)
+
 
 if __name__ == '__main__':
     main()

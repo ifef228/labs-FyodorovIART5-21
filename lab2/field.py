@@ -4,6 +4,9 @@ def field(items, *args):
 
     for good in items:
         d = {arg: good[arg] for arg in args}
-        result.append(d)
+        if len(d.keys()) == 1:
+            d = list(d.values())
+            result += d
+        else:
+            result.append(d)
     return result
-

@@ -18,10 +18,4 @@ def cm_timer2():
     print(end_time - start_time)
 
 
-with CmTimer1():
-    sleep(5.5)
-
-with cm_timer2():
-    sleep(1.2)
-
 
